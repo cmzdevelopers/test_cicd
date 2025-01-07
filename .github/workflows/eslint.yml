@@ -1,0 +1,26 @@
+name: Eslint
+
+on:
+  push:
+    branches: [ main, test, dev ]
+  pull_request:
+    branches: [ main, test, dev ]
+
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+       uses: actions/checkout@v4
+      
+      - name: set up node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+      
+      - name: install dependencies
+        run: npm ci
+      
+      - name: run eslint
+        run: npx eslint $(git diff --name-only HEAD~1 | grep -E '\.(js|jsx|ts|tsx)$' | tr '\n' ' ')
