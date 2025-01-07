@@ -19,8 +19,7 @@ jobs:
           node-version: 22.12.0
       
       - name: install eslint
-        run: npm ci
-        # run: npm install eslint@8.32.0 --save-dev
+        run: npm install eslint@8.32.0
       
       - name: run eslint
         run: npx eslint $(git ls-files 'frontend/*.{js,jsx,ts,tsx}')
