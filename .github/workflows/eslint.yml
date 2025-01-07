@@ -23,4 +23,4 @@ jobs:
         run: cd frontend && npm install eslint@8.32.0
       
       - name: run eslint
-        run: cd frontend && npx eslint $(git ls-files 'frontend/*.{js,jsx,ts,tsx}')
+        run: cd frontend && npx eslint $(git ls-files '*.{js,jsx,ts,tsx}')
