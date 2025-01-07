@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  ruff-lint:
+  pylint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
