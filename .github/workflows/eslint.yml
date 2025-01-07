@@ -22,4 +22,4 @@ jobs:
         run: npm install eslint@8.32.0 --save-dev
       
       - name: run eslint
-        run: npx eslint $(git diff --name-only HEAD~1 | grep -E '\.(js|jsx|ts|tsx)$' | tr '\n' ' ')
+        run: npx eslint $(git ls-files 'frontend/*.{js,jsx,ts,tsx}')
