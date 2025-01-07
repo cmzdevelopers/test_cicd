@@ -5,6 +5,8 @@ import './App.css'
 
 import { useEffect } from 'react'
 
+const unused_variable = 0;
+
 function App() {
   const [count, setCount] = useState(0)
 
