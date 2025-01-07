@@ -17,8 +17,8 @@ b = 4
 
 MyString = 'Hello World'
 
-c = sumab(a, b, c=2)
+c = sumab(a, b)
 print(c)
 
 
-d = divab(a, b)
+d = divab(a, b, c = 2)
