@@ -3,6 +3,8 @@ from functools import lru_cache
 def sumab(a, b):
     return a + b
 
+def mult(a, b):
+    return a * b
 
 def divab(a,b, c):
     return a / b + c
