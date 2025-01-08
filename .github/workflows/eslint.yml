@@ -1,8 +1,6 @@
 name: Eslint
 
 on:
-  push:
-    branches: [ main, test, dev ]
   pull_request:
     branches: [ main, test, dev ]
 
@@ -17,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
-          cache: 'npm'
       
       - name: install eslint
         run: cd frontend && npm install
