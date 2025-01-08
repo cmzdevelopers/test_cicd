@@ -1,0 +1,15 @@
+stages:
+  - lint
+
+ruff-lint:
+  stage: lint
+  image: python:3.12-slim
+  script:
+    - pip install ruff
+    - ruff check .
+  only:
+    refs:
+      - main
+    merge-requests:
+      to: main
+    allow-failure: false
